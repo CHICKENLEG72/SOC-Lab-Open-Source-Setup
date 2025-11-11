@@ -1,0 +1,6 @@
+$ curl -u elastic:changeme 'http://localhost:9200/_cat/indices?v&s=index'
+health status index                           uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   filebeat-2025.11.11             a1b2c3d4e5f6g7h8i9j0   1   0   1,256      0            15.4mb    15.4mb
+green  open   wazuh-alerts-4.x-000001         z9y8x7w6v5u4t3s2r1q0   1   0   432        0            4.3mb     4.3mb
+green  open   .kibana_task_manager_1          ktnm1234abcd5678efgh   1   0   6          0            512kb     512kb
+checked_at: 2025-11-11T12:32:10Z
