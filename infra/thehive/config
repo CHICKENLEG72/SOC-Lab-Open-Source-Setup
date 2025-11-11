@@ -1,0 +1,8 @@
+# Example TheHive config snippet
+thehive:
+  http:
+    port: 9000
+  cortex:
+    url: "http://cortex:9001"
+    key: "REPLACE_WITH_CORTEX_APIKEY"
+  # authentication and storage settings omitted for brevity
