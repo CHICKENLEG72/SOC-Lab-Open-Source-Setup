@@ -1,3 +1,5 @@
+🔒 Open-Source SOC Lab — End-to-end security monitoring using Wazuh, Suricata, Filebeat, Kibana, and TheHive. Detect, visualize, and respond to attacks.
+
 # SOC Lab — Built by Aditya Kumar Goswami
 
 > Compact, reproducible SOC lab using open-source tooling: Filebeat, Elasticsearch, Kibana, Wazuh, Suricata, TheHive, Cortex, MISP, Grafana, OPNsense.
@@ -83,6 +85,12 @@ MISP: http://<server-ip>:8085
 ### Verification & snapshots
 
 I included CLI outputs in /snapshots that show cluster health, indices, registered agents and a sample Suricata event.
+
+## Key Achievements
+- Built a complete open-source SOC using Wazuh, Suricata, Filebeat, Kibana, and TheHive.
+- Automated log ingestion and visualization pipeline (ECS-compliant).
+- Demonstrated threat detection, enrichment, and case management.
+- Integrated environment variables and secure credential handling.
 
 ## Notes
 
