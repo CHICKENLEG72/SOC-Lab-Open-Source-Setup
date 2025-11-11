@@ -1,0 +1,11 @@
+# Example Cortex config snippet
+cortex:
+  http:
+    port: 9001
+  analyzers:
+    - name: VirusTotal
+      config:
+        api_key: "VT_API_KEY_GOES_HERE"
+    - name: PassiveDNS
+      config:
+        source: "VirusTotal"
